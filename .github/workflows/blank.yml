@@ -1,15 +1,16 @@
 name: fastcampus board
 env:
  AWS_REGION: ap-northeast-2
- on:
-  push:
+on:
+ push:
     branches: [ main ]
 
-    jobs:
-        deploy:
-            name: Deploy
-            runs-on: ubuntu-latest
-            environment: production
+jobs:
+    deploy:
+        name: Deploy
+        runs-on: ubuntu-latest
+        environment: production
+
         steps:
         - name: Checkout
           uses: actions/checkout@v3
