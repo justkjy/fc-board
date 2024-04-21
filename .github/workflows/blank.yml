@@ -20,7 +20,9 @@ jobs:
           with:
            java-version: '17'
            distribution: 'zulu'
-           run: chmod +x ./gradlew
+
+        - name: Change gradlew permissions
+          run: chmod +x ./gradlew
 
         - name: Build with Gradle
           run: ./gradlew clean build
@@ -31,7 +33,6 @@ jobs:
           with:
            format: YYYY-MM-DD THH-mm-ss
            utcOffset: "+09:00"
-           run: chmod +x ./gradlew
 
         - name: Generate deployment package
           run: |
