@@ -1,4 +1,4 @@
-name: fastcampus board
+name: fast campus board
 env:
  AWS_REGION: ap-northeast-2
 on:
@@ -28,7 +28,7 @@ jobs:
           uses: 1466587594/get-current-time@v2
           id: current-time
           with:
-           format: YYYY-MM-DDTHH-mm-ss
+           format: YYYY-MM-DD THH-mm-ss
            utcOffset: "+09:00"
 
         - name: Generate deployment package
